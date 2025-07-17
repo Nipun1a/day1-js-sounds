@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-image: url('bg_image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 30px;
+}
+
+/* ==== Headings ==== */
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 3em;
+  text-shadow: 0 0 5px #facc15, 0 0 10px #facc15, 0 0 20px #facc15;
+  animation: glow 1.5s ease-in-out infinite alternate;
+  margin-bottom: 10px;
+}
+
+h4 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  text-shadow: 0 0 5px #facc15, 0 0 10px #facc15, 0 0 20px #facc15;
+  animation: glow 1.5s ease-in-out infinite alternate;
+  margin-bottom: 40px;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #facc15, 0 0 10px #facc15, 0 0 20px #facc15;
+  }
+  to {
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+  }
+}
+
+/* ==== Container & Box ==== */
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-bottom: 50px;
+}
+
+.box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid #ccc;
+  border-radius: 0.75em;
+  padding: 30px;
+  width: 200px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  position: relative;
+  color: white;
+}
+
+/* ==== Button Style ==== */
+
+.btn {
+  position: relative;
+  padding: 1em 2em;
+  font-size: 1.5em;
+  border: 2px solid #facc15;
+  background-color: transparent;
+  color: #facc15;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #facc15;
+  bottom: -5px;
+  right: -5px;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  color: black;
+}
+
+.btn:hover::before {
+  bottom: 0;
+  right: 0;
+}
+
+/* ==== Soundbar ==== */
+
+.soundbar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4px;
+  margin-top: 20px;
+  height: 30px;
+  visibility: hidden;
+}
+
+.soundbar span {
+  display: inline-block;
+  width: 5px;
+  height: 100%;
+  background: #facc15;
+  animation: bounce 1s infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+.soundbar span:nth-child(1) { animation-delay: 0s; }
+.soundbar span:nth-child(2) { animation-delay: 0.1s; }
+.soundbar span:nth-child(3) { animation-delay: 0.2s; }
+.soundbar span:nth-child(4) { animation-delay: 0.3s; }
+.soundbar span:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(2.5);
+  }
+}
+
+/* ==== Paragraph ==== */
+
+.box p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #fff;
+}
