@@ -11,3 +11,7 @@ Check out the live version here:
 
 - Clickable buttons to play different sounds
 - Clean and minimalistic UI
+
+## 🧑‍💻 Author
+
+- GitHub: [@Nipun1a](https://github.com/Nipun1a)
